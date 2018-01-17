@@ -1,234 +1,189 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>BashLang</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
 
-<head>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>BashLang</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/sb-admin.css" rel="stylesheet">
-
-    <!-- Morris Charts CSS -->
-    <link href="css/plugins/morris.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body>
-
-    <div id="wrapper">
-        <!-- Navigation -->
-        <nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button class="navbar-toggler hidden-sm-up pull-sm-right" type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    &#9776;
-                </button>
-                <a class="navbar-brand" href="index.html">BashLang</a>
-            </div>
-            <!-- Top Menu Items -->
-            <ul class="nav navbar-nav top-nav navbar-right pull-xs-right">
-                <li class="dropdown nav-item">
-                    <!-- <div class="dropdown"> -->
-                        <a class="nav-link dropdown-toggle" href="javascript:;" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-envelope"></i> <b class="caret"></b><span class="sr-only">(current)</span></a>
-                        <ul class="dropdown-menu message-dropdown">
-                            <li class="dropdown-item message-preview">
-                                <a href="javascript:;">
-                                    <div class="media">
-                                        <span class="media-left">
-                                            <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                        </span>
-                                        <div class="media-body">
-                                            <h5 class="media-heading"><strong>John Smith</strong>
-                                            </h5>
-                                            <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="dropdown-item message-preview">
-                                <a href="javascript:;">
-                                    <div class="media">
-                                        <span class="media-left">
-                                            <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                        </span>
-                                        <div class="media-body">
-                                            <h5 class="media-heading"><strong>Роберт Кускильдин</strong>
-                                            </h5>
-                                            <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="dropdown-item message-preview">
-                                <a href="javascript:;">
-                                    <div class="media">
-                                        <span class="media-left">
-                                            <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                        </span>
-                                        <div class="media-body">
-                                            <h5 class="media-heading"><strong>Роберт Кускильдин</strong>
-                                            </h5>
-                                            <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="dropdown-item message-footer">
-                                <a href="javascript:;">Read All New Messages</a>
-                            </li>
-                        </ul>
-                    <!-- </div> -->
-                </li>
-                <li class="dropdown nav-item">
-                    <!-- <div class="dropdown"> -->
-                        <a href="javascript:;" class="nav-link dropdown-toggle" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell"></i> <b class="caret"></b><span class="sr-only">(current)</span></a>
-                        <ul class="dropdown-menu alert-dropdown">
-                            <li class="dropdown-item">
-                                <a href="javascript:;">Уведомление <span class="label label-default"> Alert Badge</span></a>
-                            </li>
-                            
-                            <li class="dropdown-divider"></li>
-                            <li class="dropdown-item">
-                                <a href="javascript:;">Смотреть все</a>
-                            </li>
-                        </ul>
-                    <!-- </div> -->
-                </li>
-                <li class="dropdown nav-item">
-                    <a href="javascript:;" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Роберт Кускильдин <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-item">
-                            <a href="javascript:;"><i class="fa fa-fw fa-user"></i> Профиль</a>
-                        </li>
-                        <li class="dropdown-item">
-                            <a href="javascript:;"><i class="fa fa-fw fa-book"></i> Библиотека слов </a>
-                        </li>
-                        <li class="dropdown-item">
-                            <a href="javascript:;"><i class="fa fa-fw fa-envelope"></i> Сообщения</a>
-                        </li>
-                        <li class="dropdown-item">
-                            <a href="javascript:;"><i class="fa fa-fw fa-gear"></i> Настройки</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li class="dropdown-item">
-                            <a href="javascript:;"><i class="fa fa-fw fa-power-off"></i> Выход</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            <div class="collapse navbar-collapse navbar-toggleable-sm navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav list-group">
-                    <li class="list-group-item" align="center">
-                        <a align="center"><img align="center" class="img-circle" src="imgonline-com-ua-Resize-ESXIeyoXe2gvu5.jpg"></a>
-							<a align="center">Роберт Кускильдин</a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="#"><i class="fa fa-fw fa-bar-chart-o"></i> Моя статистика</a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="#"><i class="fa fa-fw fa-edit"></i> Пополнить словарь </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="#"><i class="fa fa-fw fa-users"></i> Пользователи </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="list-group collapse">
-                            <li class="list-group-item">
-                                <a href="javascript:;">Dropdown Item</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="javascript:;">Dropdown Item</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="blank-page.html"><i class="fa fa-fw fa-info-circle"></i> Информация</a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="#"><i class="fa fa-fw fa-money"></i> Помочь проекту</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </nav>
-
-        <div id="page-wrapper">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Главная</a></li>
-                    <li class="breadcrumb-item"><a href="#">Языки</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Башкирский</li>
-                </ol>
-            </nav>
-            <div class="container-fluid">
-
-                <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">
-                            Изучение <strong>башкирского</strong> языка
-                        </h1>
-                    </div>
-                </div>
-               
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card">
-                            <div class="card-header card-default">
-                                <i class="fa fa-bar-chart-o fa-fw"></i> Выбор языка
-                            </div>
-                            <div class="card-block">
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
                                 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.row -->
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo">Сайт для <strong>изучения</strong> языков</a>
+									<ul class="icons">
+                                        <li><a href="#" class="icon fa-vk"><span class="label">Snapchat</span></a></li><li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                                        <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+										
+									</ul>
+								</header>
 
-            </div>
-            <!-- /.container-fluid -->
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>Башкирский язык</h1>
+											<p>Составление личного словаря для изучения слов</p>
+										</header>
+										<select class="custom-select">
+                                            <option selected>Выбрать язык</option>
+                                            <option value="1">Башкирский</option>
+                                            <option value="2">Русский</option>
+                                            <option value="3">Английский</option>
+                                        </select>
+                                        <form>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <input type="text" class="form-control" placeholder="Слово на русском">
+                                                </div>
+                                                <div class="col">
+                                                    <input type="text" class="form-control" width="auto"  placeholder="Перевод на башкирский" alt="Перевод на башкирский">
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <button type="button" class="btn btn-primary">Сохранить в словарь</button>
+									</div>
+									<span class="image object">
+										<img src="imgonline-com-ua-Resize-IiubzXFvEmAwk.jpg" alt="" />
+									</span>
+								</section>
 
-        </div>
-        <!-- /#page-wrapper -->
+						
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Как составить словарь</h2>
+									</header>
+									<div class="posts">
+										<article>
+											
+										</article>
+										
+									</div>
+								</section>
 
-    </div>
-    <!-- /#wrapper -->
+						</div>
+					</div>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+							<!-- Search -->
+							<!--	<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+                            -->
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>BashLang</h2>
+									</header>
+                                    <span class="image object">
+										<img src="images/pic01.jpg" alt="" width="50%" />
+									</span>
+                                    
+									<ul>
+                                        <li><a href="index.html">Моя статистика</a></li>
+										<li><a href="">Библиотека слов</a></li>
+										<li><a href="">Активные пользователи</a></li>
+										<li>
+											<span class="opener">Пользователи</span>
+											<ul>
+												<li><a href="#">Lorem Dolor</a></li>
+												<li><a href="#">Ipsum Adipiscing</a></li>
+												<li><a href="#">Tempus Magna</a></li>
+												<li><a href="#">Feugiat Veroeros</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Etiam Dolore</a></li>
+										<li><a href="#">Adipiscing</a></li>
+									</ul>
+								</nav>
 
-    <!-- Morris Charts JavaScript -->
-    <script src="js/plugins/morris/raphael.min.js"></script>
-    <script src="js/plugins/morris/morris.min.js"></script>
-    <script src="js/plugins/morris/morris-data.js"></script>
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Активные пользователи</h2>
+									</header>
+									<ul>
+										<li>
+								    <span class="image object">
+										<img src="images/pic01.jpg" alt="" width="50%" />
+									</span>
+											<h2><strong>user 1</strong></h2>
+									
+									<button class="btn-primary">Посмотреть профиль</button>
+                                        </li>
+                                        <li>
+								    <span class="image object">
+										<img src="images/pic01.jpg" alt="" width="50%" />
+									</span>
+											<h2><strong>user 2</strong></h2>
+									
+									<button class="btn-primary">Посмотреть профиль</button>
+                                        </li>
+                                        <li>
+								    <span class="image object">
+										<img src="images/pic01.jpg" alt="" width="50%" />
+									</span>
+											<h2><strong>user 3</strong></h2>
+									
+									<button class="btn-primary">Посмотреть профиль</button>
+                                        </li>
+                                    </ul>
+								</section>
 
-</body>
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Информация</h2>
+									</header>
+									<p>Хотите узнать о проекте больше? Присоединиться к команде или стать спонсором ?
+                                    </p>
+                                    <p>
+                                    Пишите, звоните!</p>
+									<ul class="contact">
+										<li class="fa-envelope-o"><a href="#">information@untitled.tld</a></li>
+										<li class="fa-phone">(000) 000-0000</li>
+									</ul>
+								</section>
 
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; BashLang. All rights reserved. 2018</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
